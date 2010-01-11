@@ -1,0 +1,118 @@
+<div id="asset">
+<h2><%= @photo.filename %></h2>
+<hr>
+<%= link_to image_tag(@photo.public_filename(:small)), @photo.public_filename %>
+<br />
+<h3> Photo Properties </h3>
+<hr>
+<% if @photo.exif %>
+  <table>
+  <tr>
+  <td>
+  <strong>Make</strong>
+  </td>
+  <td>
+  <%= @exif[0] %>
+  </td>
+  <td>
+  <strong>Model</strong>
+  </td>
+  <td>
+  <%= @exif[1] %>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <strong>Aperture Value</strong>
+  </td>
+
+  <td>
+  f/<%= @exif[2] %>
+  </td>
+  <td>
+  <strong>Color Space</strong>
+  </td>
+  <td>
+  <%= @exif[3] %>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <strong>Exposure Bias Value</strong>
+  </td>
+  <td>
+  <%= @exif[4] %>
+  </td>
+
+  <td>
+  <strong>Exposure Program</strong>
+  </td>
+  <td>
+  <%= @exif[5] %>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <strong>Flash
+  </td>
+  <td>
+  <%= @exif[6] %>
+  </td>
+  <td>
+  <strong>Focal Length</strong>
+  </td>
+
+  <td>
+  <%= @exif[7] %>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <strong>ISO</strong>
+  </td>
+  <td>
+  <%= @exif[8] %>
+  </td>
+  <td>
+  <strong>Metering Mode</strong>
+  </td>
+  <td>
+  <%= @exif[9] %>
+  </td>
+
+  </tr>
+  <tr>
+  <td>
+  <strong>Shutter Speed Value</strong>
+  </td>
+  <td>
+  <%= @exif[10] %>
+  </td>
+  <td>
+  <strong>Date/Time</strong>
+  </td>
+  <td>
+  <%= @exif[11] %>
+  </td>
+  </tr>
+  </table><br />
+  <% if @photo.lat_geo && @photo.long_geo %>
+    <h3>Location:</h3>
+    <hr>
+    <%= @map.div %>
+    <%= GMap.header %>
+    <%= @map.to_html %>
+  <% end %>
+<% else %>
+<p>No Exif Data</p>
+<% end %>
+</div>
+
+<div id="right-nav">
+  Photo:<br>
+  <%  if logged_in? %>
+    <%= link_to 'Delete', [@gallery, @photo], :confirm => 'Are you sure?', :method => :delete %><br>
+    <%= link_to 'Edit', edit_gallery_photo_path(@gallery, @photo) %><br>
+  <% end %>
+  <%= link_to "Back to Gallery", gallery_path(@gallery) %><br>
+</div>

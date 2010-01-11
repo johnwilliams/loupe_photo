@@ -1,0 +1,33 @@
+<div id="gallery">
+  <ul>
+    <% @galleries.each do |gallery| %>
+      <li>
+          <div id="gallery-thumb">
+            <% if gallery.photos.size > 0 %>
+              <%= link_to image_tag(gallery.photos.first.public_filename(:thumb), :border => 0), gallery %>
+            <% else %>
+              <%= link_to "No Thumbnail", gallery %>
+            <% end %>
+          </div>
+          <div id="gallery-text">
+            <%= link_to h(gallery.name), gallery %><br />
+            <%=h gallery.photos.size %> Images<br />
+            <%  if logged_in? %>
+              (<%= link_to 'edit', edit_gallery_path(gallery) %>)
+              (<%= link_to 'delete', gallery, :confirm => 'Are you sure?', :method => :delete %>)
+            <% end %>
+          </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div id="right-nav">
+  Galleries:<br>
+  <%= will_paginate @galleries %>
+  <%  if logged_in? %>
+  <br>Admin:
+  <br><%= link_to 'Create Gallery', new_gallery_path %>
+  <% end %>
+</div>
+
+  

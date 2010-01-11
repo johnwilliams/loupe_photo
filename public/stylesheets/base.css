@@ -1,0 +1,275 @@
+html, body {
+  background: #fff;
+  font-family: arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #56120E; }
+a:visited { color: #56120E; }
+a:hover { color: #56120E; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* === FLASH MESSAGES === */
+div#flash-notice {
+	
+}
+
+div#flash-warning {
+	
+}
+
+div#flash-error {
+	
+}
+
+/* === ERROR MESSAGES === */
+div#errorExplanation {
+	
+}
+
+div#errorExplanation h2 {
+	
+}
+
+div#errorExplanation p {
+	
+}
+
+div#errorExplanation ul {
+	
+}
+
+div#errorExplanation ul li {
+	
+}
+
+/* === FORMS === */
+div.fieldWithErrors {
+	
+}
+
+div.fieldWithErrors label {
+	
+}
+
+div.fieldWithErrors input, div.fieldWithErrors select, 
+div.fieldWithErrors textarea
+{
+	
+}
+
+#container {
+  width: 960px;
+  background: none;
+  margin: 0 auto;
+}
+
+#header {
+  background-color:#E6FAD6;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#header-right {
+  float:right;
+}
+
+#header-left {
+  width:700px;
+  float:left;
+  font-weight:bold;
+}
+
+
+.clear {
+  clear: both;
+}
+
+#photo {
+  margin: 10px;
+}
+
+hr {
+  border: 0;
+  color:#000000;
+  background: #000000;
+  width: 100%;
+  height: 1px;
+}
+
+#gallery
+{
+  margin: 10px;
+  float:left;
+  width:750px;
+}
+
+#gallery ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#gallery li
+{
+  float: left;
+  margin: 10px;
+  width: 350px;
+  height: 180px;
+}
+
+#gallery-thumb
+{
+  float: left;
+  margin-right:10px;
+}
+
+#gallery-thumb img {
+	background-color: #E6FAD6;
+	border: 1px solid #ddd;
+	padding: 9px;
+	margin: 1px;
+	-moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+}
+
+#gallery-thumb a img {
+	border-color: #ccc;
+}
+
+#gallery-thumb a:hover img {
+	border-width: 2px;
+	border-color: #162A0C;
+	margin: 0;
+	-moz-border-radius: 12px;
+        -webkit-border-radius : 12px;
+}
+
+#right-nav
+{
+  float: right;
+  width: 160px;
+  background: #E6FAD6;
+  margin:10px;
+  padding:5px;
+}
+
+li .handle {
+  cursor: move;
+}
+
+#asset
+{
+  margin: 10px;
+  float:left;
+  width:750px;
+}
+
+#asset ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#asset li
+{
+  float: left;
+  margin: 30px;
+  width: 180px;
+  height: 180px;
+}
+
+#asset-thumb
+{
+  float: left;
+  margin-right:10px;
+}
+
+#asset-thumb img {
+	background-color: #E6FAD6;
+	border: 1px solid #ddd;
+	padding: 9px;
+	margin: 1px;
+	-moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+}
+
+#asset-thumb a img {
+	border-color: #ccc;
+}
+
+#asset-thumb a:hover img {
+	border-width: 2px;
+	border-color: #162A0C;
+	margin: 0;
+	-moz-border-radius: 12px;
+        -webkit-border-radius: 12px;
+}
+
+a img {
+  display: block;
+  border: 0;
+}
+
+#map_div {
+	background-color: #E6FAD6;
+	border: 1px solid #ddd;
+	padding: 9px;
+	margin: 1px;
+        height: 300px;
+	-moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+}

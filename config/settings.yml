@@ -1,0 +1,29 @@
+development: &non_production_settings
+  site_url: http://localhost:3000
+  site_name: Loupe Photo Gallery
+  admin_email: bort@bort.com
+  maps_api_key: ABQIAAAAV6oVNsdwBnTeuHC4tTnsxRTJQa0g3IQ9GZqIMmInSLzwtGDKaBTAp4IKir0Dba7sZigC1-K3kquKGw
+  
+test:
+  <<: *non_production_settings
+
+qa:
+  site_url: http://test.veloshots.com
+  site_name: Loupe Photo Gallery
+  admin_email: john@veloshots.com
+  maps_api_key: ABQIAAAAV6oVNsdwBnTeuHC4tTnsxRTMZM69nMOvPZzSsJPeSWxTN1123xRzVvmAuRVjMu4kwwcKZwOgIP8Gfg
+
+
+staging:
+  site_url: http://staging.example.com
+  site_name: Loupe Photo Gallery
+  admin_email: bort@bort.com
+  maps_api_key: MY_GOOGLE_MAPS_API_KEY
+
+  
+production:
+  site_url: http://www.example.com
+  site_name: Loupe Photo Gallery
+  admin_email: bort@bort.com
+  maps_api_key: MY_GOOGLE_MAPS_API_KEY
+

@@ -1,0 +1,25 @@
+<div id="asset">
+  <h2>
+    <%=h @gallery.name %>
+  </h2>
+  <hr>
+  <ul>
+    <% @photos.each do |photo| %>
+      <li>
+        <div id="asset-thumb">
+          <%= link_to image_tag(photo.public_filename(:thumb), :border => 0), gallery_photo_path(@gallery, photo) %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div id="right-nav">
+  <%=h @gallery.name %>:<br>
+  <%= will_paginate @photos %>
+  <%  if logged_in? %>
+    <%= link_to 'Create Gallery', new_gallery_path %><br>
+    <%= link_to 'Add Photos', new_gallery_photo_path(@gallery) %><br>
+  <% end %>
+  <%= link_to 'Back to Galleries', galleries_path %><br>
+
+</div>

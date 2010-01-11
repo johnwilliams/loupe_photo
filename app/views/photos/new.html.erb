@@ -1,0 +1,14 @@
+<h1>New photo</h1>
+
+<% form_for([@gallery, @photo], :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <label for="mugshot">Upload A Photo:</label>
+    <%= f.file_field :uploaded_data %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', photos_path %>
